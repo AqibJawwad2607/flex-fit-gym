@@ -78,7 +78,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   validateSearch: (s: Record<string, unknown>): { lang?: "bn" } =>
-    s.lang === "bn" ? { lang: "bn" } : {},
+    s["lang"] === "bn" ? { lang: "bn" } : {},
   head: () => ({
     meta: [
       { charSet: "utf-8" },
