@@ -58,7 +58,7 @@ function Index() {
       <Section id="facilities" title={h.facilities.title} lead={h.facilities.lead}>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {h.facilities.items.map((f, i) => {
-            const Icon = facilityIcons[i];
+            const Icon = facilityIcons[i] ?? Dumbbell;
             return (
               <li key={f.title} className="rounded-lg border border-border bg-card p-6 transition-base hover:border-primary">
                 <Icon className="size-7 text-primary" aria-hidden />
